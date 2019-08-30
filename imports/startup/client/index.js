@@ -31,7 +31,7 @@ const middlewareLink = new ApolloLink((operation, forward) => {
 const httpLinkAuth = middlewareLink.concat(httpLink);
 
 const wsLink = new WebSocketLink({
-    uri: `${window.location.origin}/graphql`.replace(/^http/, "ws"),
+    uri: `${window.location.origin}/subscriptions`.replace(/^http/, "ws"),
     options: {
         reconnect: true,
         connectionParams: {

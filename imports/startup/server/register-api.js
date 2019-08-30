@@ -46,15 +46,9 @@ const server = new ApolloServer({
         }
     },
     subscriptions: {
-        path: "/graphql",
+        path: "/subscriptions",
         onConnect: async (connectionParams, webSocket, context) => {
             console.log(`Subscription client connected using Apollo server's built-in SubscriptionServer.`)
-
-            if (connectionParams.authToken !== null) {
-                return {
-                    currentUser: await getUser(connectionParams.authToken),
-                };
-            }
         },
         onDisconnect: async (webSocket, context) => {
             console.log(`Subscription client disconnected.`)
