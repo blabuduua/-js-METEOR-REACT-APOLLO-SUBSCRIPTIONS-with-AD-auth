@@ -1,0 +1,15 @@
+type Resolution {
+    _id: String!
+    userId: String!
+    name: String!
+    goals: [Goal]
+    completed: Boolean!
+}
+
+extend type Query {
+    resolutions: [Resolution]
+}
+
+extend type Mutation {
+    createResolution(name: String!): Resolution
+}

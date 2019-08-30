@@ -1,0 +1,14 @@
+type User {
+    _id: String
+    email: String
+    resolutions: [Resolution]
+    goals: [Goal]
+}
+
+type Query {
+    user: User
+}
+
+type Mutation {
+    authenticate(login: String!, password: String!): String
+}

@@ -1,0 +1,11 @@
+extend type Query {
+	sayHello(name: String!): String
+}
+
+type Subscription {
+	currentTime: String!
+}
+
+extend type Mutation {
+	setUpdateIntervalTime(timeInMs: Int!): Boolean
+}

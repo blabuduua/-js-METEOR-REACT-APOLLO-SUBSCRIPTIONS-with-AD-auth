@@ -1,0 +1,24 @@
+{
+  "name": "mmrn",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "@apollo/react-hooks": "^3.0.1",
+    "@babel/runtime": "^7.5.5",
+    "activedirectory2": "^1.2.7",
+    "apollo-boost": "^0.4.4",
+    "apollo-link-ws": "^1.0.18",
+    "apollo-server-express": "^2.8.1",
+    "bcrypt": "^3.0.6",
+    "graphql": "^14.4.2",
+    "lodash": "^4.17.15",
+    "meteor-node-stubs": "^0.4.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-import": "^3.0.0"
+  }
+}
