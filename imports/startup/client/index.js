@@ -34,6 +34,9 @@ const wsLink = new WebSocketLink({
     uri: `${window.location.origin}/subscriptions`.replace(/^http/, "ws"),
     options: {
         reconnect: true,
+        connectionParams: {
+            authToken: Accounts._storedLoginToken(),
+        },
     },
 });
 

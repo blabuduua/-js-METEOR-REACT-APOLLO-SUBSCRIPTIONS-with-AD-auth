@@ -49,6 +49,14 @@ const server = new ApolloServer({
         path: "/subscriptions",
         onConnect: async (connectionParams, webSocket, context) => {
             console.log(`Subscription client connected using Apollo server's built-in SubscriptionServer.`)
+
+            if (connectionParams.authToken !== null) {
+                return {
+                    currentUser: await getUser(connectionParams.authToken),
+                };
+            }
+
+            throw new Error('Missing auth token!');
         },
         onDisconnect: async (webSocket, context) => {
             console.log(`Subscription client disconnected.`)

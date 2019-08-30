@@ -17,8 +17,7 @@ export default {
         sayHello: (root, { name }) => `Hello ${name}`,
     },
     Mutation: {
-        setUpdateIntervalTime(root, { timeInMs }, { user } ) {
-            console.log(user);
+        setUpdateIntervalTime(root, { timeInMs }) {
             updateInterval = timeInMs;
         },
     },
