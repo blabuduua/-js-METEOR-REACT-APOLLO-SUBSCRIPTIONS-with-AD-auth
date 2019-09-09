@@ -4,8 +4,6 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-base@1.4.0             # Packages every Meteor app needs to have
-mobile-experience@1.0.5       # Packages for a great mobile UX
 mongo@1.6.2                   # The database Meteor supports right now
 static-html             # Define static page content in .html files
 tracker@1.2.0                 # Meteor's client-side reactive programming library
@@ -19,3 +17,5 @@ apollo
 accounts-base
 accounts-password
 alanning:roles
+meteor-base
+mobile-experience
